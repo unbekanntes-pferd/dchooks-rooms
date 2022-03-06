@@ -10,7 +10,7 @@ async function bootstrap() {
   const app = await NestFactory.createMicroservice<MicroserviceOptions>(AppModule, {
     transport: Transport.RMQ,
     options: {
-      urls: [...config.get('rabbit.url')],
+      urls: [config.get<string>('rabbit.url')],
       queue: 'room_queue',
       queueOptions: {
         durable: true
