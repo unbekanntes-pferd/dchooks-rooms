@@ -1,3 +1,5 @@
+import { LargeNumberLike } from "crypto"
+
 export class AuthTokenResponse {
     access_token: string
     token_type: string
@@ -53,4 +55,60 @@ export class UserAccount {
     phone?: string
     homeRoomId?: number
     customer?: any
+}
+
+export class Range {
+
+    offset: number
+    limit: number
+    total: number
+    
+}
+
+export class UserInfo {
+    id: number
+    userType: string
+    avatarUuid: string
+    userName: string
+    firstName: string
+    lastName: string
+    email?: string
+}
+
+export class NodePermissions {
+    manage: boolean
+    read: boolean
+    create: boolean
+    change: boolean
+    delete: boolean
+    manageDownloadShare: boolean
+    manageUploadShare: boolean
+    readRecycleBin: boolean
+    restoreRecycleBin: boolean
+    deleteRecycleBin: boolean
+}
+
+export class PubliKeyContainer {
+    version: string
+    publicKey: string
+    createdAt?: Date
+    createdBy: number
+
+}
+
+
+
+export class RoomUser {
+    userInfo: UserInfo
+    isGranted: boolean
+    permissions?: NodePermissions
+    publicKeyContainer?: PubliKeyContainer
+
+}
+
+export class RoomUserList {
+
+    range: Range
+    items: RoomUser[]
+
 }

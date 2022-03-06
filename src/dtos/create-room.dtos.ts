@@ -1,4 +1,6 @@
-export class CreateRoomDTO {
+
+
+export class CreateRoomDto {
 
     // generate payload to create a room 
     constructor(
@@ -10,6 +12,16 @@ export class CreateRoomDTO {
       public adminGroupIds?: number[],
       public classification?: number,
       public quota?: number,
-    ) {}
+    ) {
+     
+    }
 
 }
+
+export class CreatePersonalRoomDto {
+
+  userId: number
+  name?: string
+  recycleBinRetentionPeriod?: number
+  
+  }
