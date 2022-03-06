@@ -267,7 +267,7 @@ export class AppService {
 
     const user = await this.getUserInfo(room.userId);
 
-    if (room.name !== undefined || room.name !== null) {
+    if (room.name === undefined || room.name === null) {
 
       roomName = `${user.userInfo.firstName} ${user.userInfo.lastName}`;
 
