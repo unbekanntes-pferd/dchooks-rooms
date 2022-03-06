@@ -11,5 +11,8 @@ export default () => ({
         roomAdminId: process.env.DRACOON_ROOM_ADMIN_ID,
         parentRoomId: process.env.DRACOON_PARENT_ROOM_ID,
        }
-   }
+   },
+   rabbit: {
+    url: process.env.RABBIT_MQ_HOST
+  },
   });
