@@ -11,7 +11,7 @@ COPY . .
 RUN npm run build
 
 
-FROM node:latest As prod
+FROM node:alpine As prod
 
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}

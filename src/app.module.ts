@@ -20,7 +20,7 @@ import  appConfig from './config/configuration';
         return status < 400;
       },
       headers: {
-        'User-Agent': 'DC Hooks Room-Service 0.1.0'
+        'User-Agent': 'dc-hooks|room-service|0.1.0'
       }
     }),
     inject: [ConfigService]

@@ -3,7 +3,6 @@ import { MessagePattern } from '@nestjs/microservices';
 import { EventTypeNames, RoomActionType } from './action.models';
 import { AppService } from './app.service';
 import { CreatePersonalRoomDto } from './dtos/create-room.dtos';
-import { UpdatePersonalRoomDto } from './dtos/room.update.dto';
 import { UserWebhookDto } from './dtos/user-webhook.dto';
 
 @Controller()
